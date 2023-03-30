@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>正则表达式 | 程序员成长指南</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/ichigo/logo.ico">
+    <meta name="description" content="记录个人的成长过程, 知识点归纳总结, 从入坑到挖坑的开心时光~">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/ichigo/assets/css/0.styles.cf0a4651.css" as="style"><link rel="preload" href="/ichigo/assets/js/app.8ce08534.js" as="script"><link rel="preload" href="/ichigo/assets/js/3.440a4598.js" as="script"><link rel="preload" href="/ichigo/assets/js/1.7543bd4f.js" as="script"><link rel="preload" href="/ichigo/assets/js/17.895365fa.js" as="script"><link rel="preload" href="/ichigo/assets/js/9.00897824.js" as="script"><link rel="prefetch" href="/ichigo/assets/js/10.06f06474.js"><link rel="prefetch" href="/ichigo/assets/js/11.d88a996d.js"><link rel="prefetch" href="/ichigo/assets/js/12.40112076.js"><link rel="prefetch" href="/ichigo/assets/js/13.ecbcfc5b.js"><link rel="prefetch" href="/ichigo/assets/js/14.2d4ad4d8.js"><link rel="prefetch" href="/ichigo/assets/js/15.7f02c07a.js"><link rel="prefetch" href="/ichigo/assets/js/16.3e83926b.js"><link rel="prefetch" href="/ichigo/assets/js/18.5ce7702c.js"><link rel="prefetch" href="/ichigo/assets/js/19.4026da04.js"><link rel="prefetch" href="/ichigo/assets/js/20.82775ba2.js"><link rel="prefetch" href="/ichigo/assets/js/21.336709a8.js"><link rel="prefetch" href="/ichigo/assets/js/22.cd8ce7e7.js"><link rel="prefetch" href="/ichigo/assets/js/23.de97340d.js"><link rel="prefetch" href="/ichigo/assets/js/24.8136404b.js"><link rel="prefetch" href="/ichigo/assets/js/25.580ae8ec.js"><link rel="prefetch" href="/ichigo/assets/js/4.2bb206fd.js"><link rel="prefetch" href="/ichigo/assets/js/5.4377ba8f.js"><link rel="prefetch" href="/ichigo/assets/js/6.374eca97.js"><link rel="prefetch" href="/ichigo/assets/js/7.d49f5611.js"><link rel="prefetch" href="/ichigo/assets/js/8.8f8e74be.js">
+    <link rel="stylesheet" href="/ichigo/assets/css/0.styles.cf0a4651.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>程序员成长指南</h3> <p class="description" data-v-59e6cb88>记录个人的成长过程, 知识点归纳总结, 从入坑到挖坑的开心时光~</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>所幸你是例外</span>
+          
+        <!---->
+        2023
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/ichigo/" class="home-link router-link-active"><!----> <span class="site-name">程序员成长指南</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/ichigo/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><a href="https://juejin.cn/user/726107228492253" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  导航
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="/ichigo/数据结构与算法/" class="nav-link"><i class="undefined"></i>
+  数据结构与算法
+</a></div><div class="nav-item"><a href="https://juejin.cn/user/726107228492253" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-juejin"></i>
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/coding-lin" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <h3 class="name" data-v-1fad0c41>
+    所幸你是例外
+  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>13</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/ichigo/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><a href="https://juejin.cn/user/726107228492253" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  导航
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="/ichigo/数据结构与算法/" class="nav-link"><i class="undefined"></i>
+  数据结构与算法
+</a></div><div class="nav-item"><a href="https://juejin.cn/user/726107228492253" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-juejin"></i>
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/coding-lin" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Java全系列</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/ichigo/Java全系列/Java IO流.html" class="sidebar-link">IO流</a></li><li><a href="/ichigo/Java全系列/Java8新特性.html" class="sidebar-link">lambda表达示</a></li><li><a href="/ichigo/Java全系列/Java9新特性.html" class="sidebar-link">Java9新特性</a></li><li><a href="/ichigo/Java全系列/Java全篇.html" class="sidebar-link">概述</a></li><li><a href="/ichigo/Java全系列/Java常用类.html" class="sidebar-link">大数类</a></li><li><a href="/ichigo/Java全系列/正则表达式.html" class="active sidebar-link">正则表达式</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88></h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>所幸你是例外</span>
+          
+        <!---->
+        2023
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page" style="padding-right:0;"><section style="display:;"><div class="page-title"><h1 class="title">正则表达式</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>所幸你是例外</span></i> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h1 id="正则表达式"><a href="#正则表达式" class="header-anchor">#</a> 正则表达式</h1> <p>学习文档：https://tool.oschina.net/uploads/apidocs/jquery/regexp.html</p> <p>基本语法：</p> <table><thead><tr><th>表达式</th> <th>描述</th></tr></thead> <tbody><tr><td>\</td> <td>将下一个字符标记为一个特殊字符、或一个原义字符、或一个向后引用、或一个八进制转义符。例如，“<code>n</code>”匹配字符“<code>n</code>”。“<code>\n</code>”匹配一个换行符。串行“<code>\\</code>”匹配“<code>\</code>”而“<code>\(</code>”则匹配“<code>(</code>”。</td></tr> <tr><td>^</td> <td>行首匹配。</td></tr> <tr><td>$</td> <td>行尾匹配。</td></tr> <tr><td>*</td> <td>匹配0次或多次。例：zo*能匹配 &quot;zo&quot;或&quot;zoo&quot;。* 等价于 {0,}</td></tr> <tr><td>+</td> <td>匹配1次或多次。例：zo+能匹配&quot;zo&quot;或&quot;zoo&quot;，但不能匹配&quot;z&quot;。+等价于{1,}</td></tr> <tr><td>？</td> <td>匹配0次或1次。例：do(es)?能匹配&quot;does&quot;或&quot;do&quot;。?等价于{0,1}</td></tr> <tr><td>？</td> <td>当该字符紧跟在任意一个其他限制符（*,+,?,{n},{n,},{n,m}）后时，匹配模式是非贪婪的。非贪婪模式尽可能少的匹配所搜索的字符串，而贪婪模式是尽可以多的匹配所搜索的字符串。例：对于字符串&quot;oooo&quot;，o+?将配置单个&quot;o&quot;，而o+将配置所有&quot;o&quot;</td></tr> <tr><td><strong>.</strong></td> <td>配置除&quot;\n&quot;外的任意单个字符。要配置包括&quot;\n&quot;在内的任何字符，可以使用“(.|\n)”</td></tr> <tr><td>{n}</td> <td>匹配n次。例：o{2}不能匹配“bob&quot; 中的&quot;o&quot;，但能匹配&quot;food&quot;中的2个&quot;o&quot;</td></tr> <tr><td>{n,}</td> <td>至少匹配n次。例：o{2,}不能匹配&quot;bob&quot;中的&quot;o&quot;，但是能匹配&quot;foooood&quot;中的所有&quot;o&quot;</td></tr> <tr><td>{n,m}</td> <td>最少匹配n次且最多匹配m次。例：o{1,3}能匹配&quot;foooood&quot;中的前3个&quot;o&quot;</td></tr> <tr><td>(pattern)</td> <td></td></tr> <tr><td>(?:pattern)</td> <td>非获取匹配。例：&quot;industr(?:y|ies)&quot;就是一个比&quot;industry|industries&quot;更简略的表达式。</td></tr> <tr><td>(?=pattern)</td> <td>正向肯定预查，在任何匹配pattern的字符串开始处匹配查找字符串。非获取匹配。例：”Windows(?!95|98|NT|2000)&quot;能匹配&quot;Windows2000&quot;，但不能匹配&quot;Windows3.1&quot;</td></tr> <tr><td>(?!pattern)</td> <td>正向否定预查，在任何不匹配pattern的字符串开始处匹配查找字符串。非获取匹配。能匹配&quot;Windows3.1&quot;中的&quot;Windows&quot;，但不能匹配&quot;Windows2000&quot;中的&quot;Windows&quot;</td></tr> <tr><td>(?&lt;=pattern)</td> <td>反向肯定预查。例：&quot;(?!95|98|NT|2000)Windows&quot;能匹配&quot;2000Windows&quot;中的&quot;Windows&quot;，但不能匹配&quot;3.1Windows&quot;中的&quot;Windows&quot;</td></tr> <tr><td>(?&lt;!pattern)</td> <td>反向否定预查。例：&quot;(?!95|98|NT|2000)Windows&quot;能匹配&quot;3.1Windows&quot;中的&quot;Windows&quot;，但不能匹配&quot;2000Windows&quot;中的&quot;Windows&quot;</td></tr> <tr><td>x|y</td> <td>匹配x或y。例：z|food能匹配&quot;z&quot;或&quot;food&quot;。(z|f)ood则匹配&quot;zood&quot;或&quot;food&quot;</td></tr> <tr><td>[xyz]</td> <td>匹配包含的任意一个字符。例：[abc]能匹配&quot;plain&quot;中的&quot;a&quot;</td></tr> <tr><td>[^xyz]</td> <td>匹配未包含的任意一个字符。例：<code>[^abc]</code>能匹配&quot;plain&quot;中的&quot;p&quot;</td></tr> <tr><td>[a-z]</td> <td>匹配指定范围的任意字符。</td></tr> <tr><td>[^a-z]</td> <td>匹配不在指定范围的任意字符。</td></tr> <tr><td>\b</td> <td>匹配一个单词边界，也就是就单词和空格间的位置。例：&quot;er\b&quot;能匹配&quot;never&quot;中的&quot;er&quot;，但不能匹配&quot;verb&quot;中的&quot;er&quot;</td></tr> <tr><td>\B</td> <td>匹配非单词边界。</td></tr> <tr><td>\d</td> <td>匹配一个数字字符。等价于<code>[0-9]</code></td></tr> <tr><td>\D</td> <td>匹配一个非数字字符。等价于<code>[^0-9]</code></td></tr> <tr><td>\s</td> <td>匹配任何空白字符。包括空格、制表符、换页符等。等价于<code>[\f\n\r\t\v]</code></td></tr> <tr><td>\S</td> <td>匹配任何非空白字符。等价于<code>[^\f\n\r\t\v]</code></td></tr> <tr><td>\w</td> <td>匹配包括下划线的任何单词字符。等价于“<code>[A-Za-z0-9_]</code>”。</td></tr> <tr><td>\W</td> <td>匹配任何非单词字符。等价于“<code>[^A-Za-z0-9_]</code>”。</td></tr> <tr><td>\f</td> <td>匹配一个换页符。</td></tr> <tr><td>\n</td> <td>匹配一个换行符。</td></tr> <tr><td>\r</td> <td>匹配一个回车符。</td></tr> <tr><td>\t</td> <td>匹配一个制表符。</td></tr> <tr><td>\v</td> <td>匹配一个垂直制表符。</td></tr> <tr><td>\Xn</td> <td>匹配n，其中n为十六进制转义值。十六进制转义值必须为确定的两个数字长。例：“<code>\x41</code>”匹配“<code>A</code>”。“<code>\x041</code>”则等价于“<code>\x04&amp;1</code>”</td></tr> <tr><td>\num</td> <td>匹配num，其中num是个正整数。例：“<code>(.)\1</code>”匹配两个连续的相同字符。</td></tr></tbody></table> <p>常用正则表达式：</p> <table><thead><tr><th>用户名</th> <th>/^[a-z0-9_-]{3,16}$/</th></tr></thead> <tbody><tr><td>密码</td> <td>/^[a-z0-9_-]{6,18}$/</td></tr> <tr><td>十六进制值</td> <td>/^#?([a-f0-9]{6}|[a-f0-9]{3})$/</td></tr> <tr><td>电子邮箱</td> <td>/^([a-z0-9_.-]+)@([\da-z.-]+).([a-z.]{2,6})$/   /^[a-z\d]+(.[a-z\d]+)*@(<a href="-%5B%5Cda-z%5D">\da-z</a>?)+(.{1,2}[a-z]+)+$/</td></tr> <tr><td>URL</td> <td>/^(https?😕/)?([\da-z.-]+).([a-z.]{2,6})([/\w .-]<em>)</em>/?$/</td></tr> <tr><td>IP 地址</td> <td>/((2[0-4]\d|25[0-5]|[01]?\d\d?).){3}(2[0-4]\d|25[0-5]|[01]?\d\d?)/ /^(?😦?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/</td></tr> <tr><td>HTML 标签</td> <td>/^&lt;([a-z]+)([^&lt;]+)<em>(?:&gt;(.</em>)&lt;/\1&gt;|\s+/&gt;)$/</td></tr> <tr><td>删除代码\注释</td> <td>(?&lt;!http:|\S)//.*$</td></tr> <tr><td>Unicode编码中的汉字范围</td> <td>/^[\u2E80-\u9FFF]+$/</td></tr></tbody></table> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>regex<span class="token punctuation">.</span></span><span class="token class-name">Matcher</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>regex<span class="token punctuation">.</span></span><span class="token class-name">Pattern</span></span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * Author : AiTao
+ * Create : 2021/4/12 17:53
+ * Description : 正则表达式工具类
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">RegExpUtils</span> <span class="token punctuation">{</span>
+    <span class="token comment">/**
+     * 正则校验
+     *
+     * @param regex   正则表达式
+     * @param content 校验内容
+     * @return
+     */</span>
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isMatch</span><span class="token punctuation">(</span><span class="token class-name">String</span> regex<span class="token punctuation">,</span> <span class="token class-name">String</span> content<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Pattern</span> pattern <span class="token operator">=</span> <span class="token class-name">Pattern</span><span class="token punctuation">.</span><span class="token function">compile</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Matcher</span> matcher <span class="token operator">=</span> pattern<span class="token punctuation">.</span><span class="token function">matcher</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> matcher<span class="token punctuation">.</span><span class="token function">matches</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+
+    <span class="token comment">/**
+     * 正则匹配
+     *
+     * @param regex   正则表达式
+     * @param content 校验内容
+     * @return
+     */</span>
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">matcher</span><span class="token punctuation">(</span><span class="token class-name">String</span> regex<span class="token punctuation">,</span> <span class="token class-name">String</span> content<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//判空+匹配校验</span>
+        <span class="token keyword">return</span> <span class="token operator">!</span><span class="token function">isEmpty</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>content<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token function">isMatch</span><span class="token punctuation">(</span>regex<span class="token punctuation">,</span> content<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 字符串判空校验
+     *
+     * @param str 字符串
+     * @return true字段为空，false字段非空
+     */</span>
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token class-name">String</span> str<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>str <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> str<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 清除留白
+     *
+     * @param str 字符串
+     * @return
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">String</span> <span class="token function">trim</span><span class="token punctuation">(</span><span class="token class-name">String</span> str<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> str<span class="token punctuation">.</span><span class="token function">replaceAll</span><span class="token punctuation">(</span><span class="token constant">REGEXP_TRIM</span><span class="token punctuation">,</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 校验手机号
+     *
+     * @param phone 手机号
+     * @return
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isPhone</span><span class="token punctuation">(</span><span class="token class-name">String</span> phone<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token operator">!</span><span class="token function">isEmpty</span><span class="token punctuation">(</span>phone<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token function">trim</span><span class="token punctuation">(</span>phone<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token function">trim</span><span class="token punctuation">(</span>phone<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">11</span> <span class="token operator">&amp;&amp;</span> <span class="token function">isMatch</span><span class="token punctuation">(</span><span class="token constant">REGEXP_PHONE</span><span class="token punctuation">,</span> phone<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 校验邮箱
+     *
+     * @param email 邮箱
+     * @return
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isEmail</span><span class="token punctuation">(</span><span class="token class-name">String</span> email<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">matcher</span><span class="token punctuation">(</span><span class="token constant">REGEXP_EMAIL</span><span class="token punctuation">,</span> <span class="token function">trim</span><span class="token punctuation">(</span>email<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 校验用户名
+     *
+     * @param username 用户名
+     * @return
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isUsername</span><span class="token punctuation">(</span><span class="token class-name">String</span> username<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">matcher</span><span class="token punctuation">(</span><span class="token constant">REGEXP_USERNAME</span><span class="token punctuation">,</span> <span class="token function">trim</span><span class="token punctuation">(</span>username<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 校验密码
+     *
+     * @param password 密码
+     * @return
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isPassword</span><span class="token punctuation">(</span><span class="token class-name">String</span> password<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">matcher</span><span class="token punctuation">(</span><span class="token constant">REGEXP_PASSWORD</span><span class="token punctuation">,</span> <span class="token function">trim</span><span class="token punctuation">(</span>password<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 校验密码
+     *
+     * @param password 密码
+     * @return
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isStrongPassword</span><span class="token punctuation">(</span><span class="token class-name">String</span> password<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">matcher</span><span class="token punctuation">(</span><span class="token constant">REGEXP_PASSWORD_STRONG</span><span class="token punctuation">,</span> <span class="token function">trim</span><span class="token punctuation">(</span>password<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 校验验证码
+     *
+     * @param code 验证码
+     * @return
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isValidCode</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//校验验证码</span>
+        <span class="token keyword">return</span> <span class="token function">matcher</span><span class="token punctuation">(</span><span class="token constant">REGEXP_VALID_CODE</span><span class="token punctuation">,</span> <span class="token function">trim</span><span class="token punctuation">(</span>code<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 校验ipv4地址
+     *
+     * @param ipv4 IP地址
+     * @return
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isIP</span><span class="token punctuation">(</span><span class="token class-name">String</span> ipv4<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">matcher</span><span class="token punctuation">(</span><span class="token constant">REGEXP_IPV4</span><span class="token punctuation">,</span> <span class="token function">trim</span><span class="token punctuation">(</span>ipv4<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 校验图片地址
+     *
+     * @param imageUrl 图片URL
+     * @return
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isImage</span><span class="token punctuation">(</span><span class="token class-name">String</span> imageUrl<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">matcher</span><span class="token punctuation">(</span><span class="token constant">REGEXP_IMG</span><span class="token punctuation">,</span> <span class="token function">trim</span><span class="token punctuation">(</span>imageUrl<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 校验日期地址
+     *
+     * @param date 日期值
+     * @return
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isDate</span><span class="token punctuation">(</span><span class="token class-name">String</span> date<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">matcher</span><span class="token punctuation">(</span><span class="token constant">REGEXP_DATE</span><span class="token punctuation">,</span> <span class="token function">trim</span><span class="token punctuation">(</span>date<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 校验车牌号
+     *
+     * @param carNumber 车牌号
+     * @return
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isCarNumber</span><span class="token punctuation">(</span><span class="token class-name">String</span> carNumber<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">matcher</span><span class="token punctuation">(</span><span class="token constant">REGEXP_CAR_NUMBER</span><span class="token punctuation">,</span> <span class="token function">trim</span><span class="token punctuation">(</span>carNumber<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 校验汉字
+     *
+     * @param chinese 汉字
+     * @return
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isChinese</span><span class="token punctuation">(</span><span class="token class-name">String</span> chinese<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">matcher</span><span class="token punctuation">(</span><span class="token constant">REGEXP_CHINESE</span><span class="token punctuation">,</span> <span class="token function">trim</span><span class="token punctuation">(</span>chinese<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 校验数字
+     *
+     * @param digit 数字
+     * @return
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isDigit</span><span class="token punctuation">(</span><span class="token class-name">String</span> digit<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">matcher</span><span class="token punctuation">(</span><span class="token constant">REGEXP_NUMBER</span><span class="token punctuation">,</span> <span class="token function">trim</span><span class="token punctuation">(</span>digit<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 校验字母
+     *
+     * @param letter 字母
+     * @return
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isLetter</span><span class="token punctuation">(</span><span class="token class-name">String</span> letter<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">matcher</span><span class="token punctuation">(</span><span class="token constant">REGEXP_LETTER</span><span class="token punctuation">,</span> <span class="token function">trim</span><span class="token punctuation">(</span>letter<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 校验HTTP地址
+     *
+     * @param url 地址
+     * @return
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isUrl</span><span class="token punctuation">(</span><span class="token class-name">String</span> url<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">matcher</span><span class="token punctuation">(</span><span class="token constant">REGEX_URL</span><span class="token punctuation">,</span> <span class="token function">trim</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//清除首尾空白字符</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">REGEXP_TRIM</span> <span class="token operator">=</span> <span class="token string">&quot;(^\\s*)|(\\s*$)&quot;</span><span class="token punctuation">;</span>
+    <span class="token comment">//邮箱</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">REGEXP_EMAIL</span> <span class="token operator">=</span> <span class="token string">&quot;^\\w+((-\\w+)|(\\.\\w+))*\\@[A-Za-z0-9]+((\\.|-)[A-Za-z0-9]+)*\\.[A-Za-z0-9]+$&quot;</span><span class="token punctuation">;</span>
+    <span class="token comment">//手机号</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">REGEXP_PHONE</span> <span class="token operator">=</span> <span class="token string">&quot;^13[0-9]{9}|15[012356789][0-9]{8}|18[0-9]{9}|(14[57][0-9]{8})|(17[015678][0-9]{8})$&quot;</span><span class="token punctuation">;</span>
+    <span class="token comment">//账户名</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">REGEXP_USERNAME</span> <span class="token operator">=</span> <span class="token string">&quot;^[a-zA-Z\\u2E80-\\u9FFF]{2,15}$&quot;</span><span class="token punctuation">;</span>
+    <span class="token comment">//账户密码,以字母开头</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">REGEXP_PASSWORD</span> <span class="token operator">=</span> <span class="token string">&quot;^[a-zA-z]\\w{6,16}$&quot;</span><span class="token punctuation">;</span>
+    <span class="token comment">//强密码，必须包含大小写字母和数字的组合，不能使用特殊字符，长度在6-16之间</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">REGEXP_PASSWORD_STRONG</span> <span class="token operator">=</span> <span class="token string">&quot;^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{6,16}$&quot;</span><span class="token punctuation">;</span>
+    <span class="token comment">//汉字</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">REGEXP_CHINESE</span> <span class="token operator">=</span> <span class="token string">&quot;^[\\u2E80-\\u9FFF]+$&quot;</span><span class="token punctuation">;</span>
+    <span class="token comment">//验证码</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">REGEXP_VALID_CODE</span> <span class="token operator">=</span> <span class="token string">&quot;^[a-zA-Z0-9]{5}$&quot;</span><span class="token punctuation">;</span>
+    <span class="token comment">//正负数，符号位(0个或1个) + 数字(1个或多个) + 小数点(0个或1个) + 数字(1个或多个)</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">REGEXP_NUMBER</span> <span class="token operator">=</span> <span class="token string">&quot;^([+-]?)\\d{0,}\\.?\\d{1,}$&quot;</span><span class="token punctuation">;</span>
+    <span class="token comment">//正整数</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">REGEXP_POSITIVE_INTEGER</span> <span class="token operator">=</span> <span class="token string">&quot;^[1-9]\\d{0,}$&quot;</span><span class="token punctuation">;</span>
+    <span class="token comment">//负整数</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">REGEXP_NEGTIVE_INTEGER</span> <span class="token operator">=</span> <span class="token string">&quot;^([-]?)[1-9]\\d{0,}$&quot;</span><span class="token punctuation">;</span>
+    <span class="token comment">//浮点数</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">REGEXP_FLOAT_NUMBER</span> <span class="token operator">=</span> <span class="token string">&quot;^([+-]?)\\d{0,}\\.?\\d{1,}$&quot;</span><span class="token punctuation">;</span>
+    <span class="token comment">//字母</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">REGEXP_LETTER</span> <span class="token operator">=</span> <span class="token string">&quot;^[a-zA-Z]{1,}$&quot;</span><span class="token punctuation">;</span>
+    <span class="token comment">//大写字母</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">REGEXP_UPPERCASE_LETTER</span> <span class="token operator">=</span> <span class="token string">&quot;^[A-Z]{1,}$&quot;</span><span class="token punctuation">;</span>
+    <span class="token comment">//小写字母</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">REGEXP_LOWERCASE_LETTER</span> <span class="token operator">=</span> <span class="token string">&quot;^[a-z]{1,}$&quot;</span><span class="token punctuation">;</span>
+    <span class="token comment">//邮政编码</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">REGEXP_POSTAL_CODE</span> <span class="token operator">=</span> <span class="token string">&quot;^\\d{6}$&quot;</span><span class="token punctuation">;</span>
+    <span class="token comment">//IP v4地址</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">REGEXP_IPV4</span> <span class="token operator">=</span> <span class="token string">&quot;^(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})(\\.(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})){3}$&quot;</span><span class="token punctuation">;</span>
+    <span class="token comment">//图片地址 *.png</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">REGEXP_IMG</span> <span class="token operator">=</span> <span class="token string">&quot;(.*)\\.(jpg|bmp|gif|ico|pcx|jpeg|tif|png|raw|tga)$&quot;</span><span class="token punctuation">;</span>
+    <span class="token comment">//日期(yyyy-MM-dd)|(yyyy/MM/dd)|(yyyy年MM月dd日)</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">REGEXP_DATE</span> <span class="token operator">=</span> <span class="token string">&quot;^\\d{4}-(((0[13578]|(10|12))-(0[1-9]|[1-2][0-9]|3[0-1]))|(02-(0[1-9]|[1-2][0-9]))|((0[469]|11)-(0[1-9]|[1-2][0-9]|30)))$&quot;</span><span class="token punctuation">;</span>
+    <span class="token comment">//压缩文件</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">REGEXP_RAR_FILE</span> <span class="token operator">=</span> <span class="token string">&quot;(.*)\\.(rar|zip|7zip|tgz)$&quot;</span><span class="token punctuation">;</span>
+    <span class="token comment">//车牌号正则</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">REGEXP_CAR_NUMBER</span> <span class="token operator">=</span> <span class="token string">&quot;^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}[A-Z0-9]{4}[A-Z0-9挂学警港澳]{1}$&quot;</span><span class="token punctuation">;</span>
+    <span class="token comment">//QQ号码，最短5位，最长15位数字</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">REGEXP_QQ_NUMBER</span> <span class="token operator">=</span> <span class="token string">&quot;^[1-9]\\d{4,14}$&quot;</span><span class="token punctuation">;</span>
+    <span class="token comment">//URL地址： 包括 http, ftp等</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">REGEX_URL</span> <span class="token operator">=</span> <span class="token string">&quot;^(http|https|ftp)\\://([a-zA-Z0-9\\.\\-]+(\\:[a-zA-Z0-9\\.&amp;amp;%\\$\\-]+)*@)?((25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9])\\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[0-9])|([a-zA-Z0-9\\-]+\\.)*[a-zA-Z0-9\\-]+\\.[a-zA-Z]{2,4})(\\:[0-9]+)?(/[^/][\\u2E80-\\u9FFFa-zA-Z0-9\\.\\,\\?\\'\\\\/\\+&amp;amp;%\\$#\\=~_\\-@]*)*$&quot;</span><span class="token punctuation">;</span>
+
+</code></pre></div></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/ichigo/Java全系列/Java常用类.html" class="prev">
+          大数类
+        </a></span> <!----></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:0;" data-v-b57cc07c data-v-7dd95ae2></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><!----><div></div></div></div>
+    <script src="/ichigo/assets/js/app.8ce08534.js" defer></script><script src="/ichigo/assets/js/3.440a4598.js" defer></script><script src="/ichigo/assets/js/1.7543bd4f.js" defer></script><script src="/ichigo/assets/js/17.895365fa.js" defer></script><script src="/ichigo/assets/js/9.00897824.js" defer></script>
+  </body>
+</html>
